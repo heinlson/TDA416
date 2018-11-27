@@ -38,6 +38,8 @@ public class TestFrame extends JFrame implements ActionListener {
 		containerBST   = new BSTwithGet<TestMapWithCounter.TestMapEntry<String, List<Integer>>>(),
 		containerAVL   = new AVLwithGet<TestMapWithCounter.TestMapEntry<String, List<Integer>>>();
 
+		//test
+
 
 /*  ########## ########## ########## ########## ##########  */  
 /* ###### LÄGG TILL kommentarer på de 2 följande raderna när ni skrivit era samlingar */
