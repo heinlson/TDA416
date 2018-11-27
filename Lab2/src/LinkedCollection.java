@@ -36,7 +36,6 @@ public class LinkedCollection<E> extends AbstractCollection<E> {
 			this.element = element;
 			this.next = next;
 		}
-
 	} // Entry
 	// ========== ========== ========== ==========
 	/** 
