@@ -22,6 +22,7 @@ public class AVL_Tree<E extends Comparable<? super E>>
 		// The empty tree (i.e. null) is considered
 		// to be of height 0
 		int height;
+		//TEST
 
 		private AVL_Entry( E          element,
 		   Entry  left, 
