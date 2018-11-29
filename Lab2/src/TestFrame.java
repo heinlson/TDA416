@@ -236,6 +236,7 @@ public class TestFrame extends JFrame implements ActionListener {
 	// ========== ========== ========== ==========
 
 	public static void main(String[] args) {
+		System.out.println("aa".compareTo("bb"));
 		new TestFrame();
 	}
 }

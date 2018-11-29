@@ -6,10 +6,6 @@ import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 public class SLCWithGet<E extends Comparable<? super E>> extends LinkedCollection<E> implements CollectionWithGet<E>{
-
-
-
-
     @Override
     public boolean add( E element ) {
         if(element == null){
@@ -26,7 +22,7 @@ public class SLCWithGet<E extends Comparable<? super E>> extends LinkedCollectio
     private Entry add(E element, Entry entry ){
         if (entry == null){
             return new Entry(element, null);
-        } else if (element.compareTo(entry.element)<=0) {
+        } else if (element.compareTo(entry.element) <= 0) {
             return new Entry(element, entry);
         } else {
             entry.next = add(element, entry.next);
@@ -47,7 +43,7 @@ public class SLCWithGet<E extends Comparable<? super E>> extends LinkedCollectio
     }
 
     private E get(E element, Entry entry){
-        if(entry == null){
+        if(entry == null || element.compareTo(entry.element) < 0){
             return null;
         } else if(element.compareTo(entry.element) == 0){
             return entry.element;
