@@ -172,7 +172,7 @@ public class BinarySearchTree<E extends Comparable<? super E>>
 	// ========== ========== ========== ==========
 	/**
 	* Add the element into the three at first proper empty place
-	* @param o the element to be included  
+	* @param elem the element to be included
 	* @returns true if the element is in included in the tree.
 	*/
 	public boolean add( E elem ) {

@@ -24,10 +24,7 @@ public class AVL_Tree<E extends Comparable<? super E>>
 		int height;
 		//TEST
 
-		private AVL_Entry( E          element,
-		   Entry  left, 
-			   Entry  right,
-		Entry  parent ) {
+		private AVL_Entry( E element, Entry  left, Entry  right, Entry  parent ) {
 			super( element, left, right, parent );
 		 	checkHeight(this);
 		}   //  constructor AVL_Entry
@@ -316,18 +313,20 @@ public class AVL_Tree<E extends Comparable<? super E>>
              B   C  
      */
     private void doubleRotateLeft( Entry x ) {
-        Entry  y  = x.right,
-	z  = x.right.left;
-        E      e  = x.element;
+        Entry  y  = x.right, z  = x.right.left;
+        E e  = x.element;
         x.element = z.element;
         z.element = e;
         y.left    = z.right;
-        if ( y.left != null )
-	    y.left.parent = y;
+        if ( y.left != null ){
+	    	y.left.parent = y;
+        }
         z.right   = z.left;
         z.left    = x.left;
-        if ( z.left != null )
-	    z.left.parent = z;
+        if ( z.left != null ){
+        	z.left.parent = z;
+        }
+
         x.left    = z;
         z.parent  = x;
         checkHeight( z );
